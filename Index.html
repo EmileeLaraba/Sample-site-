@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emilee's Paw Printz</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  background: #f6f2ef;
+  color: #3e3a37;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px;
+  background: linear-gradient(to right, #3b2f2a, #6b5a52);
+  color: white;
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.hero-text h1 {
+  font-size: 42px;
+  line-height: 1.2;
+}
+
+.hero-text span {
+  font-style: italic;
+}
+
+.hero-text p {
+  margin: 20px 0;
+}
+
+.hero-image img {
+  width: 350px;
+  border-radius: 12px;
+}
+
+/* BUTTON */
+.btn {
+  background: #b88a6a;
+  padding: 12px 24px;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+/* PRODUCTS */
+.products {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.product-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.product-grid img {
+  width: 160px;
+  border-radius: 10px;
+}
+
+/* CARE SECTION */
+.care {
+  text-align: center;
+  padding: 60px 20px;
+  background: #efe8e3;
+}
+
+.care h2 {
+  font-size: 26px;
+  max-width: 700px;
+  margin: auto;
+}
+
+.care p {
+  margin-top: 10px;
+  color: #6b5a52;
+}
+
+/* STEPS */
+.steps {
+  text-align: center;
+  padding: 60px;
+}
+
+.step-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* ABOUT */
+.about {
+  display: flex;
+  padding: 60px;
+  gap: 40px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.about img {
+  width: 300px;
+  border-radius: 12px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about {
+    flex-direction: column;
+  }
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text">
+    <h1>A Small Piece of Them,<br><span>Forever With You.</span></h1>
+    <p>Turn your pet’s ashes into a handcrafted keepsake you can hold, wear, and cherish for a lifetime.</p>
+    <a href="#" class="btn">Create Your Keepsake</a>
+    <p>Made by hand. Treated with care. Always one of a kind.</p>
+  </div>
+
+  <div class="hero-image">
+    <img src="images/hero-heart.jpg" alt="Memorial Heart">
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products">
+  <h2>Every piece is made by hand, just for you.</h2>
+
+  <div class="product-grid">
+    <div>
+      <img src="images/heart1.jpg">
+      <p>Raw. Real. Beautifully Unique.</p>
+    </div>
+
+    <div>
+      <img src="images/heart2.jpg">
+      <p>Handcrafted with Love.</p>
+    </div>
+
+    <div>
+      <img src="images/heart3.jpg">
+      <p>Wear Their Memory Close.</p>
+    </div>
+
+    <div>
+      <img src="images/paw.jpg">
+      <p>For Every Kind of Love.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CARE SECTION (YOUR NEW TEXT) -->
+<section class="care">
+  <h2>Handled with care. Created with meaning. Made just for you.</h2>
+  <p>Every piece is thoughtfully crafted to honor your pet’s memory and the bond you shared.</p>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="steps">
+  <h2>How It Works</h2>
+
+  <div class="step-grid">
+    <div>
+      <h3>1</h3>
+      <p>Share your vision</p>
+    </div>
+
+    <div>
+      <h3>2</h3>
+      <p>Send a small amount of ashes</p>
+    </div>
+
+    <div>
+      <h3>3</h3>
+      <p>Receive your one-of-a-kind piece</p>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about">
+  <div>
+    <img src="images/emilee.jpg">
+  </div>
+
+  <div>
+    <h2>Hi, I’m Emilee</h2>
+    <p>Each piece I create is made with care, patience, and deep respect. I treat every order like it’s my own.</p>
+    <a href="#" class="btn">Create Your Keepsake</a>
+  </div>
+</section>
+
+</body>
+</html>

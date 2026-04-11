@@ -57,25 +57,18 @@
     }
 
     /* HERO */
-    .hero {
+  .hero {
   position: relative;
   min-height: 100vh;
   width: 100%;
   overflow: hidden;
-
-  background: 
-    linear-gradient(
-      to bottom,
-      rgba(20,14,10,0.6) 0%,
-      rgba(20,14,10,0.3) 50%,
-      rgba(20,14,10,0.2) 100%
+  background:
+    linear-gradient(to bottom,
+      rgba(20, 14, 10, 0.38) 0%,
+      rgba(20, 14, 10, 0.18) 45%,
+      rgba(20, 14, 10, 0.10) 100%
     ),
-    url("assets:images:hero.PNG");
-
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-
+    url("assets:images:hero.PNG") center center / cover no-repeat;
   color: #fff;
 }
 
@@ -420,10 +413,14 @@
       }
 
       .hero {
-        background:
-          linear-gradient(180deg, rgba(35,24,19,0.90) 0%, rgba(71,54,45,0.58) 48%, rgba(71,54,45,0.18) 100%),
-          url("assets/images/hearts-bg.PNG") center center / contain no-repeat;
-      }
+  background:
+    linear-gradient(180deg,
+      rgba(20, 14, 10, 0.48) 0%,
+      rgba(20, 14, 10, 0.22) 45%,
+      rgba(20, 14, 10, 0.12) 100%
+    ),
+    url("assets:images:hero.PNG") center center / cover no-repeat;
+}
 
       .hero-inner {
         padding-bottom: 40px;

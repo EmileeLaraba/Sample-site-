@@ -36,6 +36,11 @@
       margin: 0 auto;
     }
 
+    .hero .container {
+  width: 100%;
+  max-width: none;
+}
+
     .btn {
       display: inline-block;
       background: linear-gradient(180deg, #c89977, #b88361);
@@ -53,18 +58,18 @@
 
     /* HERO */
     .hero {
-      position: relative;
-      overflow: hidden;
-      background:
-        linear-gradient(to bottom,
-          rgba(20, 14, 10, 0.45) 0%,
-          rgba(20, 14, 10, 0.15) 40%,
-          rgba(20, 14, 10, 0.25) 70%,
-          rgba(20, 14, 10, 0.15) 100%
-        ),
-        url("assets/images/hearts-bg.PNG") center center / contain no-repeat;
-      color: #fff;
-    }
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background:
+    linear-gradient(to bottom,
+      rgba(20, 14, 10, 0.55) 0%,
+      rgba(20, 14, 10, 0.25) 100%
+    ),
+    url("assets/images/hearts-bg.PNG") center center / cover no-repeat;
+  color: #fff;
+}
 
     .nav {
       position: relative;
@@ -352,7 +357,7 @@
 
       .brand {
         font-size: 28px;
-      }
+      } 
 
       .nav-links {
         display: none;

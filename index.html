@@ -482,9 +482,10 @@ backdrop-filter: blur(6px);
 
 .hero {
   min-height: 780px;
-  background:
-    linear-gradient(to bottom, rgba(245,240,236,0.16), rgba(245,240,236,0.08)),
-    url('assets/images/hero.PNG') center 72% / cover no-repeat;
+  display: flex;
+  align-items: flex-start;
+  background: linear-gradient(to bottom, rgba(60,44,48,0.16), rgba(60,44,48,0.18)),
+              url('assets/images/hero.PNG') center/cover no-repeat;
 }
 
 .hero-overlay {

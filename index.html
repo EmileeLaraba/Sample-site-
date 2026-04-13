@@ -92,8 +92,18 @@
     }
 
     .hero {
-      padding: 68px 0 54px;
-    }
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: center;
+  padding: 90px 20px 60px;
+
+  background:
+    radial-gradient(circle at center, rgba(255,255,255,0.10) 0%, rgba(255,255,255,0) 45%),
+    #c2a19b;
+}
 
     .hero-grid {
       display: grid;

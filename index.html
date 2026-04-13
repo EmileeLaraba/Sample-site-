@@ -1,0 +1,273 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emilee's PawPrintz</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --rose: #B8938C;
+      --rose-light: #C2A19B;
+      --blush: #D8BBB4;
+      --ivory: #F2E6E1;
+      --text-dark: #4A3A36;
+      --text-soft: #6A5651;
+      --gold: #D8B37A;
+      --white: #FFF9F6;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: var(--ivory);
+      color: var(--text-dark);
+    }
+
+    h1, h2, h3 {
+      font-family: 'Cormorant Garamond', serif;
+      margin: 0 0 10px;
+    }
+
+    p {
+      line-height: 1.6;
+      color: var(--text-soft);
+    }
+
+    .container {
+      width: min(1100px, 90%);
+      margin: auto;
+    }
+
+    header {
+      background: var(--rose-light);
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: var(--text-dark);
+      font-size: 14px;
+    }
+
+    .hero {
+      background: url('hero.jpg') center/cover no-repeat;
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(74, 58, 54, 0.35);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 22px;
+      margin: 10px;
+      border-radius: 25px;
+      font-size: 14px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+      background: var(--white);
+      color: var(--text-dark);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      border: 1px solid white;
+      color: white;
+    }
+
+    section {
+      padding: 70px 0;
+    }
+
+    .cards {
+      display: grid;
+      gap: 25px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .steps {
+      display: grid;
+      gap: 20px;
+    }
+
+    .gallery {
+      display: grid;
+      gap: 15px;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    .cta {
+      background: var(--rose);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    footer {
+      background: var(--rose-light);
+      padding: 30px 0;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <h3>Emilee's PawPrintz</h3>
+      <div>
+        <a href="#">Home</a>
+        <a href="#">Keepsakes</a>
+        <a href="#">How It Works</a>
+        <a href="#">Gallery</a>
+        <a href="#">About</a>
+        <a href="#">FAQ</a>
+        <a href="#">Order</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-content">
+    <h1>Handmade Pet Memorial Keepsakes</h1>
+    <p>Created with love to honor the pets who will always be part of your heart.</p>
+    <a href="#" class="btn btn-primary">View Keepsakes</a>
+    <a href="#" class="btn btn-secondary">Start a Custom Order</a>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>A gentle way to keep their memory close</h2>
+    <p>Every piece is handcrafted with care, compassion, and attention to the details that matter most.</p>
+  </div>
+</section>
+
+<section style="background: var(--blush);">
+  <div class="container">
+    <h2>Memorial Keepsakes</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Memorial Hearts</h3>
+        <p>Elegant resin hearts with ashes, fur, flowers, and meaningful details.</p>
+      </div>
+      <div class="card">
+        <h3>Paw Print Keepsakes</h3>
+        <p>A beautiful tribute shaped around the love they left behind.</p>
+      </div>
+      <div class="card">
+        <h3>Custom Designs</h3>
+        <p>One-of-a-kind memorials created to match your vision.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>How It Works</h2>
+    <div class="steps">
+      <p><strong>Step 1:</strong> Reach out and tell me about your pet.</p>
+      <p><strong>Step 2:</strong> Send ashes, fur, or meaningful items.</p>
+      <p><strong>Step 3:</strong> Your piece is handcrafted with care.</p>
+      <p><strong>Step 4:</strong> Receive a keepsake to treasure forever.</p>
+    </div>
+  </div>
+</section>
+
+<section style="background: var(--ivory);">
+  <div class="container">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="img1.jpg" alt="">
+      <img src="img2.jpg" alt="">
+      <img src="img3.jpg" alt="">
+      <img src="img4.jpg" alt="">
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>About Emilee’s PawPrintz</h2>
+    <p>Every piece is made with compassion and intention. These keepsakes hold deep meaning, and I treat each one with the care and respect it deserves.</p>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Ready to create something meaningful?</h2>
+  <p>Start your custom memorial piece today.</p>
+  <a href="#" class="btn btn-primary">Start My Order</a>
+</section>
+
+<footer>
+  <p>Emilee's PawPrintz • Handmade Memorial Keepsakes</p>
+</footer>
+
+</body>
+</html>

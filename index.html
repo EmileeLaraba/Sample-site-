@@ -696,45 +696,49 @@
   }
 }
 
-/* ===== FORCE DESKTOP HERO LAYOUT ===== */
+/* ===== HERO LAYOUT ===== */
 .hero .container {
   width: min(1280px, calc(100% - 48px));
 }
 
 .hero-content {
-  max-width: 1280px !important;
+  max-width: 1280px;
   width: 100%;
   padding: 90px 0 60px;
 }
 
 .hero-layout {
-  display: grid !important;
-  grid-template-columns: minmax(0, 1.1fr) minmax(380px, 520px) !important;
-  gap: 64px !important;
-  align-items: center !important;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(380px, 520px);
+  gap: 72px;
+  align-items: center;
 }
 
 .hero-text {
-  text-align: left !important;
+  text-align: left;
 }
 
 .hero-text h1 {
   max-width: 680px;
+  line-height: 1.02;
 }
 
 .hero-text p {
-  max-width: 560px !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-  text-align: left !important;
+  max-width: 560px;
+  margin-top: 18px;
+  margin-left: 0;
+  margin-right: 0;
+  text-align: left;
 }
 
 .hero-buttons {
-  justify-content: flex-start !important;
+  justify-content: flex-start;
+  margin-top: 16px;
 }
 
 .hero-note {
-  text-align: left !important;
+  margin-top: 8px;
+  text-align: left;
   max-width: 560px;
 }
 
@@ -746,45 +750,116 @@
 
 .hero-image-wrap img {
   width: 100%;
-  max-width: 520px !important;
+  max-width: 520px;
   border-radius: 22px;
-  box-shadow: 0 18px 50px rgba(0,0,0,0.14);
-}
-
-/* ===== HERO FINAL POLISH ===== */
-
-.hero-layout {
-  gap: 72px !important;
-}
-
-.hero-text h1 {
-  line-height: 1.02;
-}
-
-.hero-text p {
-  margin-top: 18px;
-}
-
-.hero-buttons {
-  margin-top: 16px;
-}
-
-.hero-note {
-  margin-top: 8px;
-}
-
-/* IMAGE UPGRADE */
-.hero-image-wrap img {
   transform: translateY(8px);
-  box-shadow: 
+  box-shadow:
     0 30px 80px rgba(0,0,0,0.18),
     0 10px 30px rgba(0,0,0,0.12);
   transition: transform 0.4s ease;
 }
 
 .hero-image-wrap img:hover {
-  transform: translateY(0px) scale(1.02);
+  transform: translateY(0) scale(1.02);
 }
+
+@media (max-width: 900px) {
+  .nav-wrap {
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 0;
+    gap: 10px;
+  }
+
+  .brand {
+    font-size: 1.8rem;
+  }
+
+  nav {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+  }
+
+  .hero {
+    min-height: auto;
+  }
+
+  .hero .container {
+    width: min(1180px, calc(100% - 24px));
+  }
+
+  .hero-content {
+    max-width: 680px;
+    width: 100%;
+    padding: 6px 0 12px;
+  }
+
+  .hero-layout {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: clamp(28px, 8vw, 36px);
+    line-height: 1.04;
+    margin-bottom: 8px;
+    max-width: none;
+  }
+
+  .hero-text p {
+    margin-top: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 92%;
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .hero-buttons {
+    margin-top: 14px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .hero-note {
+    margin-top: 8px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 92%;
+    font-size: 0.92rem;
+  }
+
+  .hero-image-wrap {
+    margin-top: 4px;
+  }
+
+  .hero-image-wrap img {
+    max-width: 220px;
+    border-radius: 20px;
+    transform: none;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  section {
+    padding: 72px 0;
+  }
+}
+
 
   </style>
 </head>
@@ -1020,7 +1095,7 @@ I know how meaningful these keepsakes are, which is why I treat every memorial a
       </p>
 
       <div class="order-actions">
-        <a href="mailto:emileespawprintz@gmail.com?subject=Custom Memorial Piece&body=Hi, I'm reaching out about creating a memorial piece for my pet. I'd love to learn more about the process." class="btn-primary">
+        <a href="mailto:emileespawprintz@gmail.com?subject=Custom Memorial Piece&body=Hi, I'm reaching out about creating a memorial piece for my pet. I'd love to learn more about the process." class="btn btn-primary">
   Start My Order
 </a>
       </div>

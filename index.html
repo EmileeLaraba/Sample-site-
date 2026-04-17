@@ -37,12 +37,7 @@
     body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background: linear-gradient(
-    to bottom,
-    #b8938c 0%,
-    #b08a84 45%,
-    #a98781 100%
-  );
+  background: var(--rose-light);
   color: var(--text-dark);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -97,7 +92,7 @@
   position: sticky;
   top: 0;
   z-index: 50;
-  background: #e5bcc5;
+  background: var(--rose);
   border-bottom: 1px solid rgba(74, 58, 54, 0.08);
 }
 
@@ -137,15 +132,16 @@
     }
 
     .hero {
-      position: relative;
-      min-height: 92vh;
-      display: flex;
-      align-items: center;
-      overflow: hidden;
-      background: #e0afb9;
-        radial-gradient(circle at 50% 35%, rgba(255, 249, 246, 0.34), transparent 35%),
-        linear-gradient(rgba(232, 214, 210, 0.6), rgba(216, 183, 176, 0.7))
-    }
+  position: relative;
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 35%, rgba(255, 249, 246, 0.34), transparent 35%),
+    linear-gradient(rgba(232, 214, 210, 0.6), rgba(216, 183, 176, 0.7)),
+    var(--rose);
+}
 
     .hero::before {
       content: "";
@@ -276,7 +272,7 @@
     }
 
     .soft-band {
-  background: #ecdcd7;
+  background: var(--rose-light);
   text-align: center;
 }
 
@@ -293,7 +289,7 @@
     }
 
     .card {
-  background: #fff9f6;
+  background: var(--white);
   border: 1px solid rgba(74, 58, 54, 0.06);
   border-radius: var(--radius-lg);
   padding: 28px;
@@ -317,7 +313,7 @@
   object-fit: contain;
   border-radius: 14px;
   margin-bottom: 16px;
-  background: #ecdcd7; /* soft background so empty space looks intentional */
+  background: var(--rose-light);
   padding: 10px;
 }
 
@@ -332,7 +328,7 @@
 }
 
    .blush-section {
-  background: #d7bdb7;
+  background: var(--rose-light);
 }
 
     .steps-grid {
@@ -341,7 +337,7 @@
     }
 
     .step {
-  background: #fff9f6;
+  background: var(--white);
   border: 1px solid rgba(74, 58, 54, 0.06);
   border-radius: var(--radius-md);
   padding: 22px 24px;
@@ -366,7 +362,7 @@
     }
 
     .feature {
-  background: #fff9f6;
+  background: var(--white);
   border-radius: var(--radius-md);
   padding: 20px;
   border: 1px solid rgba(74,58,54,0.06);
@@ -380,11 +376,11 @@
     }
 
     .gallery-item {
-      overflow: hidden;
-      border-radius: 18px;
-      box-shadow: var(--shadow);
-      background: white;
-    }
+  overflow: hidden;
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  background: var(--white);
+}
 
     .gallery-item img {
       width: 100%;
@@ -400,7 +396,7 @@
 
     .about-box,
 .faq-box {
-  background: #fff9f6;
+  background: var(--white);
   border: 1px solid rgba(74, 58, 54, 0.06);
   border-radius: var(--radius-lg);
   padding: 30px;
@@ -419,12 +415,10 @@
     }
 
     .cta {
-      background:
-        radial-gradient(circle at center, rgba(255, 249, 246, 0.12), transparent 40%),
-        linear-gradient(135deg, var(--rose), var(--rose-light));
-      color: var(--white);
-      text-align: center;
-    }
+  background: var(--rose);
+  color: var(--white);
+  text-align: center;
+}
 
     .cta h2,
     .cta p {
@@ -438,12 +432,12 @@
     }
 
     footer {
-      background: #b58f88;
-      color: var(--white);
-      padding: 30px 0;
-      text-align: center;
-      font-size: 0.95rem;
-    }
+  background: var(--rose-deep);
+  color: var(--white);
+  padding: 30px 0;
+  text-align: center;
+  font-size: 0.95rem;
+}
 
     .reveal {
       opacity: 0;
@@ -610,15 +604,16 @@
       }
     }
 
+
 .order-section {
   padding: 88px 0;
-  background: #e7d5d0;
+  background: var(--rose-light);
 }
 
 .order-card {
   max-width: 860px;
   margin: 0 auto;
-  background: #fff9f6;
+  background: var(--white);
   border: 1px solid rgba(74, 58, 54, 0.08);
   border-radius: 28px;
   padding: 48px 38px;
@@ -648,7 +643,7 @@
 }
 
 .order-step {
-  background: rgba(255,255,255,0.75);
+  background: var(--white);
   border: 1px solid rgba(74, 58, 54, 0.06);
   border-radius: 16px;
   padding: 18px 18px;

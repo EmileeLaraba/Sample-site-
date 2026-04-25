@@ -767,8 +767,54 @@
   }
 }
 
+/* ===== CLEAN IMAGE LIGHTBOX ===== */
+.gallery-item img {
+  cursor: zoom-in;
+}
 
-  </style>
+.image-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(62, 47, 43, 0.82);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 22px;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.image-lightbox.active {
+  display: flex;
+  opacity: 1;
+}
+
+.image-lightbox img {
+  max-width: min(96vw, 1100px);
+  max-height: 88vh;
+  width: auto;
+  height: auto;
+  border-radius: 18px;
+  box-shadow: 0 24px 70px rgba(0,0,0,0.35);
+  cursor: zoom-out;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.92);
+  color: var(--heading-text);
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+}
+</style>
 </head>
 <body>
 
@@ -1046,6 +1092,11 @@ I know how meaningful these keepsakes are, which is why I treat every memorial a
     </div>
   </footer>
 
+  <div class="image-lightbox" id="imageLightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close image">&times;</button>
+  <img id="lightboxImage" src="" alt="">
+</div>
+  
   <script>
     const reveals = document.querySelectorAll('.reveal');
 
@@ -1061,6 +1112,34 @@ I know how meaningful these keepsakes are, which is why I treat every memorial a
     });
 
     reveals.forEach((el) => observer.observe(el));
+  
+  const galleryImages = document.querySelectorAll('.gallery-item img');
+const imageLightbox = document.getElementById('imageLightbox');
+const lightboxImage = document.getElementById('lightboxImage');
+const lightboxClose = document.getElementById('lightboxClose');
+
+galleryImages.forEach((img) => {
+  img.addEventListener('click', () => {
+    lightboxImage.src = img.src;
+    lightboxImage.alt = img.alt;
+    imageLightbox.classList.add('active');
+  });
+});
+
+imageLightbox.addEventListener('click', (e) => {
+  if (e.target === imageLightbox || e.target === lightboxImage || e.target === lightboxClose) {
+    imageLightbox.classList.remove('active');
+    lightboxImage.src = '';
+  }
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    imageLightbox.classList.remove('active');
+    lightboxImage.src = '';
+  }
+});
+  
   </script>
 
 </body>
